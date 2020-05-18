@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 11</title>
+  </head>
+  <body>
+    <h1>Verificação de nascionalidade</h1>
+
+    Insira aqui qual país você nasceu:
+      <input type="text" name="txtpas" id="txtpas">
+    
+    <input type="button" value="Verificar" onclick="nacionalidade()">
+
+    <div id="res">
+
+    </div>
+
+    <script>
+      function nacionalidade() {
+        var txtp = window.document.getElementById('txtpas');
+        var res = window.document.getElementById('res');
+        var pa = (txtp.value);
+
+        res.innerHTML = `<p> Nascendo no país ${pa} </p>`;
+
+        if (pa == 'Brasil' || pa == 'brasil' || pa == 'br' || pa == 'BRASIL'){
+          res.innerHTML += `<p> Você é brasileiro(a). </p>`; 
+        } else {
+          res.innerHTML += `<p> Você é estrangeiro(a). </p>`;
+        }
+      }
+    </script>
+  </body>
+</html>
